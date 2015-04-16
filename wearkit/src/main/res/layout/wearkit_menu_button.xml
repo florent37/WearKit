@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@android:id/icon"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:background="@drawable/wl_circle"
+    tool:src="@drawable/wearkit_menu_accept"
+    android:layout_gravity="center"
+    android:scaleType="centerInside"
+    android:padding="13dp" />
