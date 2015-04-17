@@ -1,1 +1,1 @@
-include ':wearkit'
+include ':wearkit', 'wear'
