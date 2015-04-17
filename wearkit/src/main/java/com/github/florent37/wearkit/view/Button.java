@@ -16,15 +16,19 @@ import com.github.florent37.R;
  */
 public class Button extends FrameLayout {
 
-    private String text;
     private TextView textView;
 
     private void handleAtts(Context context, AttributeSet attrs) {
+        String text = "";
+        int textColor = -1;
+
         try {
             TypedArray a = context.obtainStyledAttributes(attrs, new int[]{
-                    android.R.attr.text        // idx 0
+                    android.R.attr.text,        // idx 0
+                    android.R.attr.textColor        // idx 1
             });
             text = a.getText(0).toString();
+            textColor = a.getInt(1,-1);
             a.recycle();
         } catch (Exception e) {
             e.printStackTrace();
@@ -33,6 +37,9 @@ public class Button extends FrameLayout {
         addView(LayoutInflater.from(getContext()).inflate(R.layout.wearkit_button, this, false));
         textView = (TextView) findViewById(android.R.id.text1);
         textView.setText(text);
+
+        if(textColor != -1)
+            textView.setTextColor(textColor);
     }
 
     public Button(Context context) {

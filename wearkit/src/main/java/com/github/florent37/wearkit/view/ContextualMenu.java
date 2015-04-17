@@ -3,6 +3,7 @@ package com.github.florent37.wearkit.view;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Color;
@@ -10,9 +11,13 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.os.Handler;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -27,7 +32,7 @@ import java.util.List;
 /**
  * Created by florentchampigny on 16/04/15.
  */
-public class ContextualMenu extends RelativeLayout implements View.OnLongClickListener {
+public class ContextualMenu extends RelativeLayout {
 
     List<Drawable> mDrawables = new ArrayList<>();
     List<String> mNames = new ArrayList<>();
@@ -67,7 +72,8 @@ public class ContextualMenu extends RelativeLayout implements View.OnLongClickLi
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public ContextualMenu(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public ContextualMenu(Context context, AttributeSet attrs, int defStyleAttr,
+                          int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
 
@@ -79,8 +85,6 @@ public class ContextualMenu extends RelativeLayout implements View.OnLongClickLi
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-
-        setOnLongClickListener(this);
 
         table = findViewById(R.id.wearkit_menu_table);
         background = (ImageView) findViewById(R.id.wearkit_menu_background);
@@ -154,7 +158,6 @@ public class ContextualMenu extends RelativeLayout implements View.OnLongClickLi
     }
 
     public void toggle() {
-
         if (table.getVisibility() == VISIBLE) {
             table.animate().alpha(0).setListener(new AnimatorListenerAdapter() {
                 @Override
@@ -177,11 +180,19 @@ public class ContextualMenu extends RelativeLayout implements View.OnLongClickLi
         }
     }
 
-    @Override
-    public boolean onLongClick(View v) {
-        toggle();
-        return true;
-    }
+    //Declare this flag globally
+    boolean goneFlag = false;
+
+    //Put this into the class
+    final Handler handler = new Handler();
+    Runnable mLongPressed = new Runnable() {
+        public void run() {
+            goneFlag = true;
+            //Code for long click
+
+            toggle();
+        }
+    };
 
     public static Bitmap getBitmapFromView(View view) {
         view.setDrawingCacheEnabled(true);
@@ -191,4 +202,37 @@ public class ContextualMenu extends RelativeLayout implements View.OnLongClickLi
         view.setDrawingCacheEnabled(false);
         return returnedBitmap;
     }
+
+    public static ContextualMenu findFrom(Context context){
+        if(context != null){
+            return findFrom(((Activity)context).getWindow().getDecorView());
+        }
+        else
+            return null;
+    }
+
+    public static ContextualMenu findFrom(View v){
+        if(v instanceof ContextualMenu)
+            return (ContextualMenu)v;
+        else if(v instanceof ViewGroup){
+            ViewGroup viewGroup = ((ViewGroup)v);
+            int childCount = viewGroup.getChildCount();
+            for(int i=0;i<childCount;++i){
+                View childView = findFrom(viewGroup.getChildAt(i));
+                if(childView != null)
+                    return (ContextualMenu) childView;
+            }
+        }
+        return null;
+    }
+
+    public static void toggleFromContext(Context context){
+        if(context != null){
+            ContextualMenu contextualMenu = findFrom(context);
+            if(contextualMenu != null){
+                contextualMenu.toggle();
+            }
+        }
+    }
+
 }

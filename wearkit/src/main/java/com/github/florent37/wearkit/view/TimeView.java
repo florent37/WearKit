@@ -3,11 +3,10 @@ package com.github.florent37.wearkit.view;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
-import android.text.format.DateFormat;
 import android.util.AttributeSet;
 import android.util.Log;
 
-import com.github.florent37.TypefacedTextView;
+import com.github.florent37.wearkit.utils.TypefacedTextView;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

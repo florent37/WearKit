@@ -6,7 +6,9 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -16,7 +18,8 @@ import com.github.florent37.wearkit.view.Pager;
 
 public class MainActivity extends FragmentActivity {
 
-    Pager viewPager;
+    private Pager viewPager;
+    private GestureDetector mDetector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +44,16 @@ public class MainActivity extends FragmentActivity {
             }
         });
 
+        final ContextualMenu contextualMenu = ((ContextualMenu) findViewById(R.id.menu));
+        if (contextualMenu != null)
+            contextualMenu.setMenuEntries(new String[]{
+                    "Accept",
+                    "Decline"
+            }, new Drawable[]{
+                    getDrawable(R.drawable.wearkit_menu_accept),
+                    getDrawable(R.drawable.wearkit_menu_decline)
+            });
 
     }
+
 }

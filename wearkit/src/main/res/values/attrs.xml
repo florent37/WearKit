@@ -3,4 +3,6 @@
     <declare-styleable name="TypefacedTextView">
         <attr name="typeface" format="string" />
     </declare-styleable>
+
+    <declare-styleable name="Button"></declare-styleable>
 </resources>

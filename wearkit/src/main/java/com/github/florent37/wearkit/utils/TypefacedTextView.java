@@ -1,4 +1,4 @@
-package com.github.florent37;
+package com.github.florent37.wearkit.utils;
 
 
 import android.content.Context;
@@ -9,6 +9,8 @@ import android.support.v4.util.LruCache;
 import android.support.wearable.watchface.WatchFaceService;
 import android.util.AttributeSet;
 import android.widget.TextView;
+
+import com.github.florent37.R;
 
 
 public class TypefacedTextView extends TextView {
