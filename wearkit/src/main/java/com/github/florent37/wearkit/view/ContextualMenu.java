@@ -95,6 +95,14 @@ public class ContextualMenu extends RelativeLayout {
         button4 = findViewById(R.id.wearkit_menu_row_2_cell_2);
 
         table.setVisibility(GONE);
+
+        //avoid scroll behind this view
+        table.setOnTouchListener(new OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return true;
+            }
+        });
     }
 
     public void setMenuEntries(List<String> names, List<Drawable> drawables) {
