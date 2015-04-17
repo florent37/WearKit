@@ -31,15 +31,16 @@ public class ContentView extends FrameLayout implements View.OnLongClickListener
         super(context, attrs, defStyleAttr, defStyleRes);
     }
 
+    private int widthSize = -1;
+
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        int widthSize = MeasureSpec.getSize(widthMeasureSpec);
-        int heightSize = MeasureSpec.getSize(heightMeasureSpec);
-
-        widthMeasureSpec = MeasureSpec.makeMeasureSpec(widthSize, MeasureSpec.EXACTLY);
-        heightMeasureSpec = MeasureSpec.makeMeasureSpec(Math.max(heightSize, widthSize), MeasureSpec.UNSPECIFIED);
-
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+
+        if(widthSize == -1) {
+            widthSize = MeasureSpec.getSize(widthMeasureSpec);
+            setMinimumHeight(widthSize);
+        }
     }
 
     @Override

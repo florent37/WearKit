@@ -31,24 +31,42 @@ public class MainActivity extends FragmentActivity {
         viewPager = (Pager) findViewById(R.id.viewPager);
         viewPager.setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) {
             @Override
-            public Fragment getItem(int position) {
-                return new Page(){
+            public Fragment getItem(final int position) {
+                if(position%2==0) {
+                    return new Page() {
+                        @Override
+                        public View onCreatePageContent(LayoutInflater inflater, @Nullable ViewGroup container) {
+                            return inflater.inflate(R.layout.content, container, false);
+                        }
 
-                    @Override
-                    public View onCreatePageContent(LayoutInflater inflater, @Nullable ViewGroup container) {
-                        return inflater.inflate(R.layout.content,container,false);
-                    }
+                        @Override
+                        public Actions onCreatePageActions() {
+                            return new Actions(new String[]{"ok", "nope"}, true);
+                        }
 
-                    @Override
-                    public Actions onCreatePageActions() {
-                        return new Actions(new String[]{"ok","nope"},true);
-                    }
+                        @Override
+                        protected void clickedOnAction(int position) {
 
-                    @Override
-                    protected void clickedOnAction(int position) {
+                        }
+                    };
+                }else{
+                    return new Page() {
+                        @Override
+                        public View onCreatePageContent(LayoutInflater inflater, @Nullable ViewGroup container) {
+                            return inflater.inflate(R.layout.content2, container, false);
+                        }
 
-                    }
-                };
+                        @Override
+                        public Actions onCreatePageActions() {
+                            return new Actions(new String[]{"show", "don't show"}, false);
+                        }
+
+                        @Override
+                        protected void clickedOnAction(int position) {
+
+                        }
+                    };
+                }
             }
 
             @Override
@@ -63,8 +81,8 @@ public class MainActivity extends FragmentActivity {
                     "Accept",
                     "Decline"
             }, new Drawable[]{
-                    getDrawable(R.drawable.wearkit_menu_accept),
-                    getDrawable(R.drawable.wearkit_menu_decline)
+                    getResources().getDrawable(R.drawable.wearkit_menu_accept),
+                    getResources().getDrawable(R.drawable.wearkit_menu_decline)
             });
 
     }

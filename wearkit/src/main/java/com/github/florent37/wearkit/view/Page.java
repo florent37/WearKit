@@ -35,6 +35,7 @@ public abstract class Page extends Fragment implements View.OnClickListener {
 
         pageContent = (ViewGroup) view.findViewById(R.id.page_content);
         pageContent.addView(onCreatePageContent(getLayoutInflater(savedInstanceState),pageContent));
+        pageContent.requestLayout();
 
         pageActions = (ViewGroup) view.findViewById(R.id.page_actions);
         Actions actions = onCreatePageActions();

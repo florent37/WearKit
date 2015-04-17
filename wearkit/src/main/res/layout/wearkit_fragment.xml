@@ -9,10 +9,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.github.florent37.wearkit.view.ContentView xmlns:android="http://schemas.android.com/apk/res/android"
+        <com.github.florent37.wearkit.view.ContentView
             android:layout_width="match_parent"
             android:id="@+id/page_content"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:background="@color/black"/>
 
 
