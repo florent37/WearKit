@@ -1,71 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:weightSum="2"
     android:id="@+id/wearkit_menu_table"
     android:background="#C000">
 
-    <LinearLayout
-        android:id="@+id/wearkit_menu_row_1"
+    <ImageView
+        android:id="@+id/wearkit_menu_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="1"
+        android:orientation="vertical"
         android:weightSum="2">
 
-        <FrameLayout
-            android:id="@+id/wearkit_menu_row_1_cell_1"
+        <LinearLayout
+            android:id="@+id/wearkit_menu_row_1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:weightSum="2">
 
-            <include layout="@layout/wearkit_menu_button"/>
+            <FrameLayout
+                android:id="@+id/wearkit_menu_row_1_cell_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
-        </FrameLayout>
+                <include layout="@layout/wearkit_menu_button" />
 
-        <FrameLayout
-            android:id="@+id/wearkit_menu_row_1_cell_2"
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/wearkit_menu_row_1_cell_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <include layout="@layout/wearkit_menu_button" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/wearkit_menu_row_2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:weightSum="2">
 
-            <include layout="@layout/wearkit_menu_button"/>
+            <FrameLayout
+                android:id="@+id/wearkit_menu_row_2_cell_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
-        </FrameLayout>
+                <include layout="@layout/wearkit_menu_button" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/wearkit_menu_row_2_cell_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <include layout="@layout/wearkit_menu_button" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
     </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/wearkit_menu_row_2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="1"
-        android:weightSum="2">
-
-        <FrameLayout
-            android:id="@+id/wearkit_menu_row_2_cell_1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <include layout="@layout/wearkit_menu_button"/>
-
-        </FrameLayout>
-
-        <FrameLayout
-            android:id="@+id/wearkit_menu_row_2_cell_2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <include layout="@layout/wearkit_menu_button"/>
-
-        </FrameLayout>
-
-    </LinearLayout>
-
-</LinearLayout>
+</FrameLayout>

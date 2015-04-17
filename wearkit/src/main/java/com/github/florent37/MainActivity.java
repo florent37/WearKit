@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 
 import com.github.florent37.wearkit.view.ContextualMenu;
 import com.github.florent37.wearkit.view.Pager;
-import com.viewpagerindicator.CirclePageIndicator;
 
 
 public class MainActivity extends FragmentActivity {
@@ -42,12 +41,6 @@ public class MainActivity extends FragmentActivity {
             }
         });
 
-        ((ContextualMenu)findViewById(R.id.menu)).setMenuEntries(new String[]{
-                "Accept",
-                "Decline",
-        }, new Drawable[]{
-                getDrawable(R.drawable.wearkit_menu_accept),
-                getDrawable(R.drawable.wearkit_menu_decline)
-        });
+
     }
 }

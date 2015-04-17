@@ -5,7 +5,6 @@ import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
@@ -15,6 +14,7 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.github.florent37.R;
@@ -33,6 +33,7 @@ public class ContextualMenu extends RelativeLayout implements View.OnLongClickLi
     List<String> mNames = new ArrayList<>();
 
     View table;
+    ImageView background;
     View button1;
     View button2;
     View button3;
@@ -82,13 +83,13 @@ public class ContextualMenu extends RelativeLayout implements View.OnLongClickLi
         setOnLongClickListener(this);
 
         table = findViewById(R.id.wearkit_menu_table);
+        background = (ImageView) findViewById(R.id.wearkit_menu_background);
         button1 = findViewById(R.id.wearkit_menu_row_1_cell_1);
         button2 = findViewById(R.id.wearkit_menu_row_1_cell_2);
         button3 = findViewById(R.id.wearkit_menu_row_2_cell_1);
         button4 = findViewById(R.id.wearkit_menu_row_2_cell_2);
 
         table.setVisibility(GONE);
-
     }
 
     public void setMenuEntries(List<String> names, List<Drawable> drawables) {
@@ -154,17 +155,17 @@ public class ContextualMenu extends RelativeLayout implements View.OnLongClickLi
 
     public void toggle() {
 
-        if (table.getVisibility() == VISIBLE){
+        if (table.getVisibility() == VISIBLE) {
             table.animate().alpha(0).setListener(new AnimatorListenerAdapter() {
                 @Override
                 public void onAnimationEnd(Animator animation) {
                     super.onAnimationEnd(animation);
                     table.setVisibility(GONE);
-                    //setBackground(new ColorDrawable(Color.TRANSPARENT));
+                    background.setBackground(new ColorDrawable(Color.TRANSPARENT));
                 }
             }).start();
-        }else {
-            //setBackground(new BitmapDrawable(FastBlurHelper.doBlur(getBitmapFromView((View)getParent()),10,false)));
+        } else {
+            background.setBackground(new BitmapDrawable(FastBlurHelper.doBlur(getBitmapFromView((View) getParent()), 10, false)));
             table.animate().alpha(1).setListener(new AnimatorListenerAdapter() {
                 @Override
                 public void onAnimationStart(Animator animation) {
