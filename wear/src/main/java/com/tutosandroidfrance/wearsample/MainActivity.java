@@ -36,14 +36,21 @@ public class MainActivity extends FragmentActivity {
             }
         });
 
-        ((ContextualMenu) findViewById(R.id.menu)).setMenuEntries(new String[]{
-                    "Accept",
-                    "Decline"
-            }, new Drawable[]{
-                    getResources().getDrawable(R.drawable.wearkit_menu_accept),
-                    getResources().getDrawable(R.drawable.wearkit_menu_decline)
-            });
+        ContextualMenu contextualMenu = ((ContextualMenu) findViewById(R.id.menu));
+        contextualMenu.setMenuEntries(new String[]{
+                "Accept",
+                "Decline"
+        }, new Drawable[]{
+                getResources().getDrawable(R.drawable.wearkit_menu_accept),
+                getResources().getDrawable(R.drawable.wearkit_menu_decline)
+        });
 
+        contextualMenu.setOnMenuClickListener(new ContextualMenu.OnMenuClickListener() {
+            @Override
+            public void onMenuClick(int position) {
+
+            }
+        });
     }
 
 }

@@ -35,6 +35,12 @@ import java.util.List;
  */
 public class ContextualMenu extends RelativeLayout {
 
+    public interface OnMenuClickListener{
+        public void onMenuClick(int position);
+    }
+
+    private OnMenuClickListener onMenuClickListener;
+
     List<Drawable> mDrawables = new ArrayList<>();
     List<String> mNames = new ArrayList<>();
 
@@ -130,6 +136,8 @@ public class ContextualMenu extends RelativeLayout {
                         @Override
                         public void onClick(View v) {
                             toggle();
+                            if(onMenuClickListener != null)
+                                onMenuClickListener.onMenuClick(0);
                         }
                     });
                 }
@@ -142,6 +150,8 @@ public class ContextualMenu extends RelativeLayout {
                         @Override
                         public void onClick(View v) {
                             toggle();
+                            if(onMenuClickListener != null)
+                                onMenuClickListener.onMenuClick(1);
                         }
                     });
                 }
@@ -154,6 +164,8 @@ public class ContextualMenu extends RelativeLayout {
                         @Override
                         public void onClick(View v) {
                             toggle();
+                            if(onMenuClickListener != null)
+                                onMenuClickListener.onMenuClick(2);
                         }
                     });
                 }
@@ -166,6 +178,8 @@ public class ContextualMenu extends RelativeLayout {
                         @Override
                         public void onClick(View v) {
                             toggle();
+                            if(onMenuClickListener != null)
+                                onMenuClickListener.onMenuClick(3);
                         }
                     });
                 }
@@ -238,4 +252,11 @@ public class ContextualMenu extends RelativeLayout {
         }
     }
 
+    public OnMenuClickListener getOnMenuClickListener() {
+        return onMenuClickListener;
+    }
+
+    public void setOnMenuClickListener(OnMenuClickListener onMenuClickListener) {
+        this.onMenuClickListener = onMenuClickListener;
+    }
 }

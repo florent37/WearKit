@@ -65,17 +65,30 @@ In your activity layout, add ContextualMenu
 </FrameLayout>
 ```
 
-And fill it in your code (4 entries max)
+Fill it in your code (4 entries max)
 
 ```java`
-((ContextualMenu) findViewById(R.id.menu)).setMenuEntries(new String[]{
-                    "Accept",
-                    "Decline"
-            }, new Drawable[]{
-                    getResources().getDrawable(R.drawable.wearkit_menu_accept),
-                    getResources().getDrawable(R.drawable.wearkit_menu_decline)
-            });
-``
+ContextualMenu contextualMenu = ((ContextualMenu) findViewById(R.id.menu));
+        contextualMenu.setMenuEntries(new String[]{
+                "Accept",
+                "Decline"
+        }, new Drawable[]{
+                getResources().getDrawable(R.drawable.wearkit_menu_accept),
+                getResources().getDrawable(R.drawable.wearkit_menu_decline)
+        });
+```
+
+And listen to the user interraction
+
+```java`
+contextualMenu.setOnMenuClickListener(new ContextualMenu.OnMenuClickListener() {
+            @Override
+            public void onMenuClick(int position) {
+
+            }
+        });
+```
+
 
 Dependencies
 --------
