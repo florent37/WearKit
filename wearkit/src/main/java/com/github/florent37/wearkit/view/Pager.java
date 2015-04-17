@@ -22,7 +22,6 @@ public class Pager extends FrameLayout {
 
     private ViewPager viewPager;
     private CirclePageIndicator pageIndicator;
-    private ContextualMenu contextualMenu;
 
     private void handleAtts(Context context, AttributeSet attrs) {
         addView(LayoutInflater.from(getContext()).inflate(R.layout.wearkit_viewpager, this, false));

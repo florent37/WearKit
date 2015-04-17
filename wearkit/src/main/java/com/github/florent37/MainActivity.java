@@ -12,7 +12,9 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.github.florent37.wearkit.Actions;
 import com.github.florent37.wearkit.view.ContextualMenu;
+import com.github.florent37.wearkit.view.Page;
 import com.github.florent37.wearkit.view.Pager;
 
 
@@ -30,10 +32,21 @@ public class MainActivity extends FragmentActivity {
         viewPager.setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) {
             @Override
             public Fragment getItem(int position) {
-                return new Fragment() {
+                return new Page(){
+
                     @Override
-                    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-                        return inflater.inflate(R.layout.page, container, false);
+                    public View onCreatePageContent(LayoutInflater inflater, @Nullable ViewGroup container) {
+                        return inflater.inflate(R.layout.content,container,false);
+                    }
+
+                    @Override
+                    public Actions onCreatePageActions() {
+                        return new Actions(new String[]{"ok","nope"},true);
+                    }
+
+                    @Override
+                    protected void clickedOnAction(int position) {
+
                     }
                 };
             }
