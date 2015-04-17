@@ -21,7 +21,7 @@ public class TimeView extends TypefacedTextView {
     private static final String TAG = TimeView.class.getSimpleName();
 
     private static Calendar calendar = Calendar.getInstance();
-    private static SimpleDateFormat dateFormat = new SimpleDateFormat("h:mm a");
+    private static SimpleDateFormat dateFormat = new SimpleDateFormat("H:mm");
 
     private String getCurrentDate(){
         return dateFormat.format(Calendar.getInstance().getTime());
