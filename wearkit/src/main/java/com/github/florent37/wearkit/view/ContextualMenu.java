@@ -21,6 +21,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.github.florent37.R;
 import com.github.florent37.wearkit.utils.FastBlurHelper;
@@ -113,6 +114,8 @@ public class ContextualMenu extends RelativeLayout {
                 }
 
                 if (count >= 1) {
+                    TextView textView = (TextView) button1.findViewById(android.R.id.text1);
+                    textView.setText(names.get(0));
                     ImageButton button = (ImageButton) button1.findViewById(android.R.id.icon);
                     button.setImageDrawable(mDrawables.get(0));
                     button.setOnClickListener(new OnClickListener() {
@@ -123,6 +126,8 @@ public class ContextualMenu extends RelativeLayout {
                     });
                 }
                 if (count >= 2) {
+                    TextView textView = (TextView) button2.findViewById(android.R.id.text1);
+                    textView.setText(names.get(1));
                     ImageButton button = (ImageButton) button2.findViewById(android.R.id.icon);
                     button.setImageDrawable(mDrawables.get(1));
                     button.setOnClickListener(new OnClickListener() {
@@ -133,6 +138,8 @@ public class ContextualMenu extends RelativeLayout {
                     });
                 }
                 if (count >= 3) {
+                    TextView textView = (TextView) button3.findViewById(android.R.id.text1);
+                    textView.setText(names.get(2));
                     ImageButton button = (ImageButton) button3.findViewById(android.R.id.icon);
                     button.setImageDrawable(mDrawables.get(2));
                     button.setOnClickListener(new OnClickListener() {
@@ -143,6 +150,8 @@ public class ContextualMenu extends RelativeLayout {
                     });
                 }
                 if (count >= 4) {
+                    TextView textView = (TextView) button4.findViewById(android.R.id.text1);
+                    textView.setText(names.get(3));
                     ImageButton button = (ImageButton) button4.findViewById(android.R.id.icon);
                     button.setImageDrawable(mDrawables.get(3));
                     button.setOnClickListener(new OnClickListener() {
@@ -179,20 +188,6 @@ public class ContextualMenu extends RelativeLayout {
             }).start();
         }
     }
-
-    //Declare this flag globally
-    boolean goneFlag = false;
-
-    //Put this into the class
-    final Handler handler = new Handler();
-    Runnable mLongPressed = new Runnable() {
-        public void run() {
-            goneFlag = true;
-            //Code for long click
-
-            toggle();
-        }
-    };
 
     public static Bitmap getBitmapFromView(View view) {
         view.setDrawingCacheEnabled(true);

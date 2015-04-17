@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">WearKit</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="roboto_light">Roboto-Light.ttf</string>
 
     <string name="dismiss">Dismiss</string>
 </resources>
