@@ -67,19 +67,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0386ffe-5c3d-43cb-92ab-1d2f146d0ff7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wear/src/main/res/drawable/sample_content_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wearkit/src/main/res/drawable/wearkit_button_background.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wearkit/src/main/res/drawable/wearkit_button_background_dismiss.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wearkit/src/main/res/drawable/wearkit_button_dismiss_shape.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wearkit/src/main/res/drawable/wearkit_button_dismiss_shape_pressed.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wearkit/src/main/res/drawable/wearkit_button_shape.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wearkit/src/main/res/drawable/wearkit_button_shape_pressed.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wearkit/src/main/res/drawable/option_background.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wearkit/src/main/res/drawable/option_background_dismiss.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wearkit/src/main/java/com/github/florent37/wearkit/view/Page.java" afterPath="$PROJECT_DIR$/wearkit/src/main/java/com/github/florent37/wearkit/view/Page.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wear/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/wear/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wearkit/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/wearkit/src/main/res/values/styles.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="WearMenu.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -142,13 +130,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wearkit_button_dismiss_shape_pressed.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="wearkit_button_dismiss_shape_pressed.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wearkit/src/main/res/drawable/wearkit_button_dismiss_shape_pressed.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.09259259" vertical-offset="0" max-vertical-offset="486">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
               <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.16816144" vertical-offset="0" max-vertical-offset="1320">
+              <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
           </provider>
         </entry>
       </file>
@@ -1890,7 +1891,6 @@
         <option value="$PROJECT_DIR$/wearkit/src/main/java/com/github/florent37/MainActivity.java" />
         <option value="$PROJECT_DIR$/wearkit/src/main/java/com/github/florent37/wearkit/view/ContentView.java" />
         <option value="$PROJECT_DIR$/wearkit/src/main/java/com/github/florent37/wearkit/view/Button.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/settings.gradle" />
         <option value="$PROJECT_DIR$/wearkit/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/wear/build.gradle" />
@@ -1915,6 +1915,7 @@
         <option value="$PROJECT_DIR$/wearkit/src/main/java/com/github/florent37/wearkit/view/Page.java" />
         <option value="$PROJECT_DIR$/wearkit/src/main/res/drawable/wearkit_button_background.xml" />
         <option value="$PROJECT_DIR$/wearkit/src/main/res/drawable/wearkit_button_background_dismiss.xml" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -2579,7 +2580,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3292683" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43101183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298292" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39947438" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2937,17 +2938,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.666667" vertical-offset="555" max-vertical-offset="1320">
-          <caret line="58" column="61" selection-start-line="58" selection-start-column="61" selection-end-line="58" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wearkit/src/main/java/com/github/florent37/wearkit/view/TimeView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="99" max-vertical-offset="795">
@@ -3113,10 +3103,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wearkit/src/main/res/drawable/wearkit_button_dismiss_shape_pressed.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09259259" vertical-offset="0" max-vertical-offset="486">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
           <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16816144" vertical-offset="0" max-vertical-offset="1320">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
   </component>

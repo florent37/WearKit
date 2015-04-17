@@ -3,7 +3,7 @@ WearKit
 
 [![Build Status](https://travis-ci.org/florent37/WearKit.svg?branch=master)](https://travis-ci.org/florent37/WearKit)
 
-![alt poster](https://raw.githubusercontent.com/florent37/WearViewStub/master/wear/src/main/res/drawable/background_small.png)
+![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content_1.png)
 
 WORK IN PROGRESS
 
