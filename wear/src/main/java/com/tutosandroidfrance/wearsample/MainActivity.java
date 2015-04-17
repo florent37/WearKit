@@ -32,7 +32,7 @@ public class MainActivity extends FragmentActivity {
 
             @Override
             public int getCount() {
-                return 10;
+                return 5;
             }
         });
 

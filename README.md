@@ -27,7 +27,55 @@ compile 'com.github.florent37:wearkit:1.0.0@aar'
 Usage
 --------
 
+StatusBar
+--------
 
+Modal Sheets - Page
+--------
+
+Contextual menu
+--------
+
+You can use display a ContextualMenu, accessible by long-click on any page content.
+
+![alt sample_menu](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_menu.png)
+
+In your activity layout, add ContextualMenu
+```xml
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <com.github.florent37.wearkit.view.Pager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <com.github.florent37.wearkit.view.StatusBarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.github.florent37.wearkit.view.ContextualMenu
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>
+```
+
+And fill it in your code (4 entries max)
+
+```java`
+((ContextualMenu) findViewById(R.id.menu)).setMenuEntries(new String[]{
+                    "Accept",
+                    "Decline"
+            }, new Drawable[]{
+                    getResources().getDrawable(R.drawable.wearkit_menu_accept),
+                    getResources().getDrawable(R.drawable.wearkit_menu_decline)
+            });
+``
 
 Dependencies
 --------
