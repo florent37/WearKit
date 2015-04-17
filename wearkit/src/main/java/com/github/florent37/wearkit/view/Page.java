@@ -3,6 +3,7 @@ package com.github.florent37.wearkit.view;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -83,7 +84,8 @@ public abstract class Page extends Fragment implements View.OnClickListener {
                 clickedOnDismiss();
             }
             else if(tag instanceof Integer){
-                clickedOnAction((Integer)tag);
+                Log.d("click","click");
+                clickedOnAction((Integer) tag);
             }
         }
     }

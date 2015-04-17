@@ -1,6 +1,4 @@
 <resources>
-    <string name="app_name">WearSample</string>
-    <string name="hello_round">Hello Round World!</string>
-    <string name="hello_square">Hello Square World!</string>
+    <string name="app_name">WearKit</string>
     <string name="placeholderText">Sushi (すし, 寿司, 鮨?) is a Japanese food consisting of cooked vinegared rice (鮨飯 sushi-meshi?) combined with other ingredients (ネタ neta?), seafood, vegetables and sometimes tropical fruits. Ingredients and forms of sushi presentation vary widely, but the ingredient which all sushi have in common is rice (also referred to as shari (しゃり?) or sumeshi (酢飯?)).</string>
 </resources>
