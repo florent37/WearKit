@@ -30,6 +30,24 @@ Usage
 StatusBar
 --------
 
+You can add a status bar, displaying application name and current time.
+
+![alt sample_menu](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_status  .png)
+
+In your activity layout, add StatusBarView
+```xml
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <com.github.florent37.wearkit.view.StatusBarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</FrameLayout>
+```
+
 Modal Sheets - Page
 --------
 

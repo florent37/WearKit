@@ -77,9 +77,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0386ffe-5c3d-43cb-92ab-1d2f146d0ff7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wearkit/src/main/java/com/github/florent37/wearkit/view/ContextualMenu.java" afterPath="$PROJECT_DIR$/wearkit/src/main/java/com/github/florent37/wearkit/view/ContextualMenu.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wear/src/main/java/com/tutosandroidfrance/wearsample/MainActivity.java" afterPath="$PROJECT_DIR$/wear/src/main/java/com/tutosandroidfrance/wearsample/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wear/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/wear/src/main/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WearMenu.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -105,8 +106,8 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.9080718" vertical-offset="469" max-vertical-offset="2280">
-              <caret line="88" column="11" selection-start-line="88" selection-start-column="11" selection-end-line="88" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.39461884" vertical-offset="334" max-vertical-offset="2550">
+              <caret line="34" column="120" selection-start-line="34" selection-start-column="120" selection-end-line="34" selection-end-column="120" />
               <folding />
             </state>
           </provider>
@@ -131,8 +132,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wear/src/main/java/com/tutosandroidfrance/wearsample/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="795">
-              <caret line="52" column="11" selection-start-line="47" selection-start-column="8" selection-end-line="52" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="855">
+              <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -141,8 +142,8 @@
       <file leaf-file-name="activity_main.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wear/src/main/res/layout/activity_main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.5555556" vertical-offset="0" max-vertical-offset="405">
-              <caret line="1" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state vertical-scroll-proportion="-8.888889" vertical-offset="0" max-vertical-offset="420">
+              <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -1910,9 +1911,9 @@
         <option value="$PROJECT_DIR$/wearkit/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/wearkit/src/main/res/layout/wearkit_statusbar_view.xml" />
         <option value="$PROJECT_DIR$/wearkit/src/main/res/layout/wearkit_menu_button.xml" />
-        <option value="$PROJECT_DIR$/wear/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/wearkit/src/main/java/com/github/florent37/wearkit/view/ContextualMenu.java" />
         <option value="$PROJECT_DIR$/wear/src/main/java/com/tutosandroidfrance/wearsample/MainActivity.java" />
+        <option value="$PROJECT_DIR$/wear/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -2399,7 +2400,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="SearchEverywhereHistoryKey" value="plugin&#9;ACTION&#9;WelcomeScreen.Plugins&#10;plug&#9;ACTION&#9;AddGradleDslPluginAction" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/wear/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/wear/src/main/res/drawable/sample_status.png" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="android.project.structure.last.selected" value="wear" />
@@ -2700,13 +2701,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/android/sdk/extras/android/m2repository/com/android/support/support-v4/21.0.0/support-v4-21.0.0-sources.jar!/android/support/v4/view/GestureDetectorCompat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6280087" vertical-offset="7348" max-vertical-offset="7920">
-          <caret line="549" column="33" selection-start-line="549" selection-start-column="33" selection-end-line="549" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/android/sdk/sources/android-21/android/view/GestureDetector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.8461537" vertical-offset="7438" max-vertical-offset="9870">
@@ -3076,17 +3070,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wear/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5555556" vertical-offset="0" max-vertical-offset="405">
-          <caret line="1" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wear/src/main/res/drawable/sample_menu.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -3105,16 +3088,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wear/src/main/java/com/tutosandroidfrance/wearsample/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="795">
-          <caret line="52" column="11" selection-start-line="47" selection-start-column="8" selection-end-line="52" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="855">
+          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wear/src/main/res/drawable/sample_status.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wear/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.888889" vertical-offset="0" max-vertical-offset="420">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.9080718" vertical-offset="469" max-vertical-offset="2280">
-          <caret line="88" column="11" selection-start-line="88" selection-start-column="11" selection-end-line="88" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.39461884" vertical-offset="334" max-vertical-offset="2550">
+          <caret line="34" column="120" selection-start-line="34" selection-start-column="120" selection-end-line="34" selection-end-column="120" />
           <folding />
         </state>
       </provider>
