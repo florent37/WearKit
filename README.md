@@ -32,7 +32,7 @@ StatusBar
 
 You can add a status bar, displaying application name and current time.
 
-![alt sample_menu](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_status  .png)
+![alt sample_menu](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_status.png)
 
 In your activity layout, add StatusBarView
 ```xml
