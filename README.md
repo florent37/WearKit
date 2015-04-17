@@ -5,7 +5,7 @@ WearKit
 
 ![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content_1.png)
 
-WORK IN PROGRESS
+Wearkit is an Android Wear implementation of WatchKit.
 
 Download
 --------
@@ -32,6 +32,7 @@ Usage
 Dependencies
 --------
 
+Using menu logos from [http://www.sketchappsources.com/free-source/960-apple-watch-menu-ui-kit-sketch-freebie-resource.html][logos_menu]
 
 Community
 --------
@@ -81,3 +82,4 @@ License
 
 
 [snap]: https://oss.sonatype.org/content/repositories/snapshots/
+[logos_menu]: http://www.sketchappsources.com/free-source/960-apple-watch-menu-ui-kit-sketch-freebie-resource.html
