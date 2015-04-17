@@ -54,7 +54,7 @@ Modal Sheets - Page
 Contextual menu
 --------
 
-You can use display a ContextualMenu, accessible by long-click on any page content.
+You can display a ContextualMenu, accessible by long-click on any page content.
 
 ![alt sample_menu](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_menu.png)
 
