@@ -35,7 +35,7 @@ public class TimeView extends TypefacedTextView {
 
     private void updateDateText(){
         setText(getCurrentDate());
-        Log.d(TAG,"updateDateText");
+        //Log.d(TAG,"updateDateText");
     }
 
     Timer timer = new Timer("TimeTimer", true);

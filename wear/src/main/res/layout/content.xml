@@ -6,7 +6,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@drawable/wearmenu_small"
+        android:background="@drawable/placeholder"
         android:scaleType="centerCrop" />
 
     <TextView
@@ -16,6 +16,6 @@
         android:textSize="12sp"
         android:padding="3dp"
         android:ellipsize="end"
-        android:text="Maecenas in fringilla justo, at elementum orci. Ut aliquet dui diam, non lacinia quam iaculis mattis. Praesent ornare pharetra ligula vitae pretium. Fusce egestas augue eu maximus bibendum. In hac habitasse platea dictumst. Aenean vitae aliquet neque. Nullam tincidunt vulputate imperdiet. Vestibulum a aliquet sapien, in sollicitudin odio." />
-
+        android:text="@string/placeholderText"
+        />
 </LinearLayout>

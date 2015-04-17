@@ -6,10 +6,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ScrollView;
 
 import com.github.florent37.R;
 import com.github.florent37.wearkit.Actions;
+
 
 /**
  * Created by florentchampigny on 17/04/15.
@@ -44,8 +46,7 @@ public abstract class Page extends Fragment implements View.OnClickListener {
             for(int i=0;i<count;++i){
                 String title = actions.getActionsNames().get(i);
                 if(title != null){
-                    Button button = new Button(getActivity());
-                    button.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                    Button button = (Button) LayoutInflater.from(getActivity()).inflate(R.layout.wearkit_button,pageActions,false);
                     pageActions.addView(button);
 
                     button.setText(title);
@@ -54,14 +55,15 @@ public abstract class Page extends Fragment implements View.OnClickListener {
                 }
             }
             if(actions.isCancelButtonEnabled()){
-                DismissButton dismissButton = new DismissButton(getActivity());
-                dismissButton.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                Button dismissButton = (Button) LayoutInflater.from(getActivity()).inflate(R.layout.wearkit_button_dismiss,pageActions,false);
                 pageActions.addView(dismissButton);
 
                 dismissButton.setText(getString(R.string.dismiss));
                 dismissButton.setTag(TAG_DISMISS);
                 dismissButton.setOnClickListener(this);
             }
+        }else{
+            pageActions.setVisibility(View.GONE);
         }
     }
 
