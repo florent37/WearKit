@@ -5,6 +5,8 @@ import android.content.Context;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
 
 /**
@@ -20,6 +22,17 @@ public class ContentView extends FrameLayout implements View.OnLongClickListener
         super(context, attrs);
 
         setOnLongClickListener(this);
+        getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
+            @Override
+            public boolean onPreDraw() {
+                if(getHeight()<getWidth()){
+                    ViewGroup.LayoutParams params = getLayoutParams();
+                    params.height = getMeasuredWidth();
+                    setLayoutParams(params);
+                }
+                return true;
+            }
+        });
     }
 
     public ContentView(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -29,18 +42,6 @@ public class ContentView extends FrameLayout implements View.OnLongClickListener
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public ContentView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
-    }
-
-    private int widthSize = -1;
-
-    @Override
-    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-
-        if(widthSize == -1) {
-            widthSize = MeasureSpec.getSize(widthMeasureSpec);
-            setMinimumHeight(widthSize);
-        }
     }
 
     @Override
