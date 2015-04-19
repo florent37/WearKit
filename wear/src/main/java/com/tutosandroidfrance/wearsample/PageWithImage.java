@@ -20,7 +20,10 @@ public class PageWithImage extends PageWithActions {
 
     @Override
     public Actions onCreatePageActions() {
-        return new Actions(new String[]{"ok", "nope"}, true);
+        return new Actions(
+                new String[]{"ok", "nope"},
+                true
+        );
     }
 
     @Override

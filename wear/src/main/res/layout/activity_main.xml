@@ -7,8 +7,7 @@
     <com.github.florent37.wearkit.view.Pager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"/>
+        android:layout_height="match_parent"/>
 
     <com.github.florent37.wearkit.view.StatusBarView
         android:layout_width="match_parent"
@@ -17,7 +16,6 @@
     <com.github.florent37.wearkit.view.ContextualMenu
         android:id="@+id/menu"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"/>
+        android:layout_height="match_parent"/>
 
 </FrameLayout>

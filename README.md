@@ -71,6 +71,89 @@ and the secondary content, displayed below.
 ![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content2.png)
 ![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content2_second.png)
 
+To enable Paged navigation, add a Pager to your activity layout
+
+```xml
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <com.github.florent37.wearkit.view.Pager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>
+```
+
+Then create your pages, extending wearkit.Page
+
+```java
+public class CustomPage extends Page {
+    @Override
+    public View onCreatePageContent(LayoutInflater inflater, @Nullable ViewGroup container) {
+        return inflater.inflate(R.layout.content2, container, false);
+    }
+
+    @Override
+    public View onCreatePageSecondaryContent(LayoutInflater inflater, @Nullable ViewGroup container) {
+        return inflater.inflate(R.layout.content2_secondary, container, false);
+    }
+}
+```
+
+You can also generate a page with secondary options buttons
+
+```java
+public class PageWithImage extends PageWithActions {
+    @Override
+    public View onCreatePageContent(LayoutInflater inflater, @Nullable ViewGroup container) {
+        return inflater.inflate(R.layout.content, container, false);
+    }
+
+    @Override
+    public Actions onCreatePageActions() {
+        return new Actions(
+                new String[]{"ok", "nope"},
+                true
+        );
+    }
+
+    @Override
+    protected void clickedOnAction(int position) {
+
+    }
+}
+```
+
+Where Actions construct with the buttons titles and a boolean to enable/disable the dismiss button.
+The click on dismiss button force scrolls the page to top.
+
+![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content1_second.png)
+
+And add an adapter (based on ViewPager FragmentStatePagerAdapter)
+
+```java
+viewPager = (Pager) findViewById(R.id.viewPager);
+        viewPager.setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) {
+            @Override
+            public Fragment getItem(final int position) {
+                if (position % 2 == 0) {
+                    return new PageWithImage();
+                } else {
+                    return new CustomPage();
+                }
+            }
+
+            @Override
+            public int getCount() {
+                return 5;
+            }
+        });
+```
+
 Contextual menu
 --------
 
