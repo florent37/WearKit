@@ -66,10 +66,7 @@ Each page is divided into two sections, the main content, displayed at least on 
 and the secondary content, displayed below.
 
 ![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content1.png)
-![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content1_second.png)
-
 ![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content2.png)
-![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content2_second.png)
 
 To enable Paged navigation, add a Pager to your activity layout
 
@@ -108,7 +105,10 @@ public class CustomPage extends Page {
 }
 ```
 
-You can also generate a page with secondary options buttons
+![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content1.png)
+![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content1_second.png)
+
+You can also generate a page with secondary options buttons extending wearkit.PageWithActions
 
 ```java
 public class PageWithImage extends PageWithActions {
@@ -135,7 +135,8 @@ public class PageWithImage extends PageWithActions {
 Where Actions construct with the buttons titles and a boolean to enable/disable the dismiss button.
 The click on dismiss button force scrolls the page to top.
 
-![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content1_second.png)
+![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content2.png)
+![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content2_second.png)
 
 And add an adapter (based on ViewPager FragmentStatePagerAdapter)
 
