@@ -137,7 +137,7 @@ And add an adapter (based on ViewPager FragmentStatePagerAdapter)
 
 ```java
 viewPager = (Pager) findViewById(R.id.viewPager);
-        viewPager.setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) {
+viewPager.setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) {
             @Override
             public Fragment getItem(final int position) {
                 if (position % 2 == 0) {
