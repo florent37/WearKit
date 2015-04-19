@@ -2,10 +2,14 @@ package com.github.florent37.wearkit.view;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.res.TypedArray;
+import android.graphics.Paint;
+import android.graphics.Typeface;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import com.github.florent37.R;
 
@@ -14,8 +18,22 @@ import com.github.florent37.R;
  */
 public class StatusBarView extends FrameLayout {
 
+    int mTitleColor = -1;
+    boolean mBackEnabled = false;
+
+    TextView mTitle;
+    TextView mTimeView;
+
     private void handleAttributes(Context context, AttributeSet attrs){
-        addView(LayoutInflater.from(getContext()).inflate(R.layout.wearkit_statusbar_view,this,false));
+        TypedArray styledAttrs = context.obtainStyledAttributes(attrs, R.styleable.StatusBarView);
+        try {
+            mTitleColor = styledAttrs.getColor(R.styleable.StatusBarView_titleColor, -1);
+            mBackEnabled = styledAttrs.getBoolean(R.styleable.StatusBarView_backEnabled,false);
+        }finally {
+            styledAttrs.recycle();
+        }
+
+        addView(LayoutInflater.from(getContext()).inflate(R.layout.wearkit_statusbar_view, this, false));
     }
 
     public StatusBarView(Context context) {
@@ -39,5 +57,11 @@ public class StatusBarView extends FrameLayout {
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
+        mTitle = (TextView) findViewById(R.id.wearkit_statusbar_title);
+        mTimeView = (TextView) findViewById(R.id.wearkit_statusbar_timeView);
+
+
+        if(mTitleColor != -1)
+            mTitle.setTextColor(mTitleColor);
     }
 }

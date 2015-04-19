@@ -8,6 +8,7 @@
     android:paddingRight="3dp">
 
     <TextView
+        android:id="@+id/wearkit_statusbar_title"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:gravity="center_vertical"
@@ -19,7 +20,7 @@
         android:alpha="0.9" />
 
     <com.github.florent37.wearkit.view.TimeView
-        android:id="@+id/timeView"
+        android:id="@+id/wearkit_statusbar_timeView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:gravity="center_vertical"

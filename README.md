@@ -113,6 +113,11 @@ Dependencies
 
 Using menu logos from [http://www.sketchappsources.com/free-source/960-apple-watch-menu-ui-kit-sketch-freebie-resource.html][logos_menu]
 
+TODO
+--------
+
+- Implement custom scrollbar, with 1/3 screen height
+
 Community
 --------
 

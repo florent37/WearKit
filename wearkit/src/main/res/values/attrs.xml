@@ -4,5 +4,10 @@
         <attr name="typeface" format="string" />
     </declare-styleable>
 
-    <declare-styleable name="Button"></declare-styleable>
+    <declare-styleable name="Button"/>
+
+    <declare-styleable name="StatusBarView">
+        <attr name="titleColor" format="color"/>
+        <attr name="backEnabled" format="boolean"/>
+    </declare-styleable>
 </resources>
