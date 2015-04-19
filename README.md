@@ -84,7 +84,7 @@ To enable Paged navigation, add a Pager to your activity layout
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
-        
+
     <com.github.florent37.wearkit.view.StatusBarView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
@@ -193,7 +193,7 @@ Fill it in your code (4 entries max)
 
 ```java`
 ContextualMenu contextualMenu = ((ContextualMenu) findViewById(R.id.menu));
-        contextualMenu.setMenuEntries(new String[]{
+contextualMenu.setMenuEntries(new String[]{
                 "Accept",
                 "Decline"
         }, new Drawable[]{
