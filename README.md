@@ -59,16 +59,15 @@ You can set the title color
 Modal Sheets - Page
 --------
 
-In Wearkit,  the navigation is based on Page.
-The user switch from right to left to change current displayed page.
+In Wearkit, navigation is based on Pagination. The user switch from right to left to switch from one to another page.
 
-Each page is divided into two sections, the main content, displayed at least on all the height of the wear screen,
-and the secondary content, displayed below.
+Each page is divided in two sections.
+The main content, displayed at least on full height of the wear screen ; and the secondary content, displayed below.
 
 ![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content1.png)
 ![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content2.png)
 
-To enable Paged navigation, add a Pager to your activity layout
+To enable Pagination, add a Pager to your activity layout
 
 ```xml
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -89,7 +88,7 @@ To enable Paged navigation, add a Pager to your activity layout
 </FrameLayout>
 ```
 
-Then create your pages, extending wearkit.Page
+Then create your pages extending wearkit.Page
 
 ```java
 public class CustomPage extends Page {
@@ -132,8 +131,8 @@ public class PageWithImage extends PageWithActions {
 }
 ```
 
-Where Actions construct with the buttons titles and a boolean to enable/disable the dismiss button.
-The click on dismiss button force scrolls the page to top.
+Actions are constructed with the buttons label. A boolean will enable/disable the dismiss button.
+(Clicking on the dismiss btn will trigger a scroll to top.)
 
 ![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content2.png)
 ![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content2_second.png)
@@ -162,7 +161,7 @@ viewPager.setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) 
 Contextual menu
 --------
 
-You can display a ContextualMenu, accessible by long-click on any page content.
+You can display a ContextualMenu, accessible by a long press on any page content.
 
 ![alt sample_menu](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_menu.png)
 
@@ -190,7 +189,7 @@ In your activity layout, add ContextualMenu
 </FrameLayout>
 ```
 
-Fill it in your code (4 entries max)
+Fill in your code with it (4 entries max)
 
 ```java`
 ContextualMenu contextualMenu = ((ContextualMenu) findViewById(R.id.menu));
