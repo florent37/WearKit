@@ -22,9 +22,10 @@ public abstract class PageWithActions extends Page implements View.OnClickListen
 
     private static final String TAG_DISMISS = "DISMISS";
 
-    public View onCreatePageSecondaryContent(LayoutInflater inflater, @Nullable ViewGroup container){
+    public final View onCreatePageSecondaryContent(LayoutInflater inflater, @Nullable ViewGroup container){
 
         LinearLayout linearLayout = new LinearLayout(container.getContext());
+        linearLayout.setOrientation(LinearLayout.VERTICAL);
         linearLayout.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
 
         Actions actions = onCreatePageActions();

@@ -17,7 +17,7 @@ import com.github.florent37.wearkit.Actions;
 /**
  * Created by florentchampigny on 17/04/15.
  */
-public abstract class Page extends Fragment implements View.OnClickListener {
+public abstract class Page extends Fragment {
     ScrollView pageScroll;
     ViewGroup mainContent;
     ViewGroup secondaryContent;
