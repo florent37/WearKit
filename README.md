@@ -84,6 +84,10 @@ To enable Paged navigation, add a Pager to your activity layout
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+        
+    <com.github.florent37.wearkit.view.StatusBarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 </FrameLayout>
 ```
