@@ -7,11 +7,12 @@ import android.view.ViewGroup;
 
 import com.github.florent37.wearkit.Actions;
 import com.github.florent37.wearkit.view.Page;
+import com.github.florent37.wearkit.view.PageWithActions;
 
 /**
  * Created by florentchampigny on 17/04/15.
  */
-public class CustomPage extends Page {
+public class CustomPage extends PageWithActions {
     @Override
     public View onCreatePageContent(LayoutInflater inflater, @Nullable ViewGroup container) {
         return inflater.inflate(R.layout.content2, container, false);
