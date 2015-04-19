@@ -72,13 +72,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0386ffe-5c3d-43cb-92ab-1d2f146d0ff7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wear/src/main/res/layout/content2_secondary.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wear/src/main/res/drawable/sample_content_1.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wear/src/main/res/drawable/sample_status.png" afterPath="$PROJECT_DIR$/wear/src/main/res/drawable/sample_status.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wear/src/main/java/com/tutosandroidfrance/wearsample/CustomPage.java" afterPath="$PROJECT_DIR$/wear/src/main/java/com/tutosandroidfrance/wearsample/CustomPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wear/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/wear/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WearMenu.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -107,8 +101,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5044843" vertical-offset="840" max-vertical-offset="2910">
-              <caret line="71" column="130" selection-start-line="71" selection-start-column="130" selection-end-line="71" selection-end-column="130" />
+            <state vertical-scroll-proportion="0.40358743" vertical-offset="840" max-vertical-offset="2910">
+              <caret line="68" column="122" selection-start-line="68" selection-start-column="122" selection-end-line="68" selection-end-column="122" />
               <folding />
             </state>
           </provider>
@@ -3102,8 +3096,8 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5044843" vertical-offset="840" max-vertical-offset="2910">
-          <caret line="71" column="130" selection-start-line="71" selection-start-column="130" selection-end-line="71" selection-end-column="130" />
+        <state vertical-scroll-proportion="0.40358743" vertical-offset="840" max-vertical-offset="2910">
+          <caret line="68" column="122" selection-start-line="68" selection-start-column="122" selection-end-line="68" selection-end-column="122" />
           <folding />
         </state>
       </provider>

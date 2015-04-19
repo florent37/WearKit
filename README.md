@@ -66,10 +66,10 @@ Each page is divided into two sections, the main content, displayed at least on 
 and the secondary content, displayed below.
 
 ![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content1.png)
-![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content1_secondary.png)
+![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content1_second.png)
 
 ![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content2.png)
-![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content2_secondary.png)
+![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content2_second.png)
 
 Contextual menu
 --------
