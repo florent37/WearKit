@@ -3,7 +3,7 @@ WearKit
 
 [![Build Status](https://travis-ci.org/florent37/WearKit.svg?branch=master)](https://travis-ci.org/florent37/WearKit)
 
-![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content_1.png)
+![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content1.png)
 
 Wearkit is an Android Wear implementation of WatchKit.
 
@@ -48,8 +48,28 @@ In your activity layout, add StatusBarView
 </FrameLayout>
 ```
 
+You can set the title color
+```xml
+<com.github.florent37.wearkit.view.StatusBarView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:titleColor="@color/blue"/>
+```
+
 Modal Sheets - Page
 --------
+
+In Wearkit,  the navigation is based on Page.
+The user switch from right to left to change current displayed page.
+
+Each page is divided into two sections, the main content, displayed at least on all the height of the wear screen,
+and the secondary content, displayed below.
+
+![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content1.png)
+![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content1_secondary.png)
+
+![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content2.png)
+![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content2_secondary.png)
 
 Contextual menu
 --------
@@ -68,8 +88,7 @@ In your activity layout, add ContextualMenu
     <com.github.florent37.wearkit.view.Pager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        android:layout_height="match_parent"/>
 
     <com.github.florent37.wearkit.view.StatusBarView
         android:layout_width="match_parent"

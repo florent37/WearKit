@@ -20,6 +20,6 @@ public class CustomPage extends Page {
 
     @Override
     public View onCreatePageSecondaryContent(LayoutInflater inflater, @Nullable ViewGroup container) {
-        return inflater.inflate(R.layout.content, container, false);
+        return inflater.inflate(R.layout.content2_secondary, container, false);
     }
 }
