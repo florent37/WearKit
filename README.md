@@ -59,7 +59,7 @@ You can set the title color
 Modal Sheets - Page
 --------
 
-In Wearkit, navigation is based on Pagination. The user switch from right to left to switch from one to another page.
+In Wearkit, navigation is based on Pagination. The user swipe from right to left to switch from one to another page.
 
 Each page is divided in two sections.
 The main content, displayed at least on full height of the wear screen ; and the secondary content, displayed below.

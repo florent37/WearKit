@@ -72,7 +72,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0386ffe-5c3d-43cb-92ab-1d2f146d0ff7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WearMenu.iws" />
@@ -102,7 +101,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.033632286" vertical-offset="3075" max-vertical-offset="4215">
+            <state vertical-scroll-proportion="6.8609867" vertical-offset="0" max-vertical-offset="4215">
               <caret line="204" column="35" selection-start-line="204" selection-start-column="35" selection-end-line="204" selection-end-column="35" />
               <folding />
             </state>
@@ -2437,7 +2436,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="SearchEverywhereHistoryKey" value="plugin&#9;ACTION&#9;WelcomeScreen.Plugins&#10;plug&#9;ACTION&#9;AddGradleDslPluginAction" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Baguette" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="android.project.structure.last.selected" value="wear" />
@@ -2641,7 +2640,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1436" height="877" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2930,6 +2929,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5375.923" vertical-offset="28226" max-vertical-offset="306960">
           <caret line="11535" column="59" selection-start-line="11535" selection-start-column="47" selection-end-line="11535" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2937,6 +2937,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="551" max-vertical-offset="107310">
           <caret line="105" column="42" selection-start-line="105" selection-start-column="42" selection-end-line="105" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2985,7 +2986,7 @@
         <state vertical-scroll-proportion="-6.4444447" vertical-offset="81" max-vertical-offset="555">
           <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
           <folding>
-            <element signature="e#673#691#0" expanded="true" />
+            <element signature="e#673#691#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3134,7 +3135,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.033632286" vertical-offset="3075" max-vertical-offset="4215">
+        <state vertical-scroll-proportion="6.8609867" vertical-offset="0" max-vertical-offset="4215">
           <caret line="204" column="35" selection-start-line="204" selection-start-column="35" selection-end-line="204" selection-end-column="35" />
           <folding />
         </state>
