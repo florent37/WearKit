@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Wearkit by florent37</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Wearkit</h1>
+        <h2>Wearkit is an Android Wear implementation of WatchKit</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/florent37/WearKit/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/florent37/WearKit/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/florent37/WearKit" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="wearkit" class="anchor" href="#wearkit" aria-hidden="true"><span class="octicon octicon-link"></span></a>WearKit</h1>
+
+<p><a href="https://travis-ci.org/florent37/WearKit"><img src="https://travis-ci.org/florent37/WearKit.svg?branch=master" alt="Build Status"></a></p>
+
+<p><img src="https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content1.png" alt="alt sample"></p>
+
+<p>Wearkit is an Android Wear implementation of WatchKit.</p>
+
+<h2>
+<a id="download" class="anchor" href="#download" aria-hidden="true"><span class="octicon octicon-link"></span></a>Download</h2>
+
+<p>In your root build.gradle add</p>
+
+<div class="highlight highlight-groovy"><pre>repositories {
+    maven {
+        url  <span class="pl-s"><span class="pl-pds">"</span>http://dl.bintray.com/florent37/maven<span class="pl-pds">"</span></span>
+    }
+}</pre></div>
+
+<p>In your wear module <a href="https://bintray.com/florent37/maven/WearKit/_latestVersion"> <img src="https://api.bintray.com/packages/florent37/maven/WearKit/images/download.svg" alt="Download"> </a></p>
+
+<div class="highlight highlight-groovy"><pre>compile <span class="pl-s"><span class="pl-pds">'</span>com.github.florent37:wearkit:1.0.0@aar<span class="pl-pds">'</span></span></pre></div>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<h2>
+<a id="statusbar" class="anchor" href="#statusbar" aria-hidden="true"><span class="octicon octicon-link"></span></a>StatusBar</h2>
+
+<p>You can add a status bar, displaying application name and current time.</p>
+
+<p><img src="https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_status.png" alt="alt sample_status"></p>
+
+<p>In your activity layout, add StatusBarView</p>
+
+<div class="highlight highlight-xml"><pre>&lt;<span class="pl-ent">FrameLayout</span> <span class="pl-e">xmlns</span><span class="pl-e">:</span><span class="pl-e">android</span>=<span class="pl-s"><span class="pl-pds">"</span>http://schemas.android.com/apk/res/android<span class="pl-pds">"</span></span>
+    <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+    <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+    <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">background</span>=<span class="pl-s"><span class="pl-pds">"</span>@color/black<span class="pl-pds">"</span></span>&gt;
+
+    &lt;<span class="pl-ent">com</span>.github.florent37.wearkit.view.StatusBarView
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>wrap_content<span class="pl-pds">"</span></span>/&gt;
+
+&lt;/<span class="pl-ent">FrameLayout</span>&gt;</pre></div>
+
+<p>You can set the title color</p>
+
+<div class="highlight highlight-xml"><pre>&lt;<span class="pl-ent">com</span>.github.florent37.wearkit.view.StatusBarView
+    <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+    <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>wrap_content<span class="pl-pds">"</span></span>
+    <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">titleColor</span>=<span class="pl-s"><span class="pl-pds">"</span>@color/blue<span class="pl-pds">"</span></span>/&gt;</pre></div>
+
+<h2>
+<a id="modal-sheets---page" class="anchor" href="#modal-sheets---page" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modal Sheets - Page</h2>
+
+<p>In Wearkit, navigation is based on Pagination. The user swipe from right to left to switch from one to another page.</p>
+
+<p>Each page is divided in two sections.
+The main content, displayed at least on full height of the wear screen ; and the secondary content, displayed below.</p>
+
+<p><img src="https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content1.png" alt="alt sample">
+<img src="https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content2.png" alt="alt sample"></p>
+
+<p>To enable Pagination, add a Pager to your activity layout</p>
+
+<div class="highlight highlight-xml"><pre>&lt;<span class="pl-ent">FrameLayout</span> <span class="pl-e">xmlns</span><span class="pl-e">:</span><span class="pl-e">android</span>=<span class="pl-s"><span class="pl-pds">"</span>http://schemas.android.com/apk/res/android<span class="pl-pds">"</span></span>
+    <span class="pl-e">xmlns</span><span class="pl-e">:</span><span class="pl-e">app</span>=<span class="pl-s"><span class="pl-pds">"</span>http://schemas.android.com/apk/res-auto<span class="pl-pds">"</span></span>
+    <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+    <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+    <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">background</span>=<span class="pl-s"><span class="pl-pds">"</span>@color/black<span class="pl-pds">"</span></span>&gt;
+
+    &lt;<span class="pl-ent">com</span>.github.florent37.wearkit.view.Pager
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>@+id/viewPager<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>/&gt;
+
+    &lt;<span class="pl-ent">com</span>.github.florent37.wearkit.view.StatusBarView
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>wrap_content<span class="pl-pds">"</span></span>/&gt;
+
+&lt;/<span class="pl-ent">FrameLayout</span>&gt;</pre></div>
+
+<p>Then create your pages extending wearkit.Page</p>
+
+<div class="highlight highlight-java"><pre><span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">CustomPage</span> <span class="pl-k">extends</span> <span class="pl-e">Page</span> {
+    <span class="pl-k">@Override</span>
+    <span class="pl-k">public</span> <span class="pl-smi">View</span> <span class="pl-en">onCreatePageContent</span>(<span class="pl-smi">LayoutInflater</span> <span class="pl-v">inflater</span>, <span class="pl-k">@Nullable</span> <span class="pl-smi">ViewGroup</span> <span class="pl-v">container</span>) {
+        <span class="pl-k">return</span> inflater<span class="pl-k">.</span>inflate(<span class="pl-smi">R</span><span class="pl-k">.</span>layout<span class="pl-k">.</span>content2, container, <span class="pl-c1">false</span>);
+    }
+
+    <span class="pl-k">@Override</span>
+    <span class="pl-k">public</span> <span class="pl-smi">View</span> <span class="pl-en">onCreatePageSecondaryContent</span>(<span class="pl-smi">LayoutInflater</span> <span class="pl-v">inflater</span>, <span class="pl-k">@Nullable</span> <span class="pl-smi">ViewGroup</span> <span class="pl-v">container</span>) {
+        <span class="pl-k">return</span> inflater<span class="pl-k">.</span>inflate(<span class="pl-smi">R</span><span class="pl-k">.</span>layout<span class="pl-k">.</span>content2_secondary, container, <span class="pl-c1">false</span>);
+    }
+}</pre></div>
+
+<p><img src="https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content1.png" alt="alt sample">
+<img src="https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content1_second.png" alt="alt sample"></p>
+
+<p>You can also generate a page with secondary options buttons extending wearkit.PageWithActions</p>
+
+<div class="highlight highlight-java"><pre><span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">PageWithImage</span> <span class="pl-k">extends</span> <span class="pl-e">PageWithActions</span> {
+    <span class="pl-k">@Override</span>
+    <span class="pl-k">public</span> <span class="pl-smi">View</span> <span class="pl-en">onCreatePageContent</span>(<span class="pl-smi">LayoutInflater</span> <span class="pl-v">inflater</span>, <span class="pl-k">@Nullable</span> <span class="pl-smi">ViewGroup</span> <span class="pl-v">container</span>) {
+        <span class="pl-k">return</span> inflater<span class="pl-k">.</span>inflate(<span class="pl-smi">R</span><span class="pl-k">.</span>layout<span class="pl-k">.</span>content, container, <span class="pl-c1">false</span>);
+    }
+
+    <span class="pl-k">@Override</span>
+    <span class="pl-k">public</span> <span class="pl-smi">Actions</span> <span class="pl-en">onCreatePageActions</span>() {
+        <span class="pl-k">return</span> <span class="pl-k">new</span> <span class="pl-smi">Actions</span>(
+                <span class="pl-k">new</span> <span class="pl-smi">String</span>[]{<span class="pl-s"><span class="pl-pds">"</span>ok<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>nope<span class="pl-pds">"</span></span>},
+                <span class="pl-c1">true</span>
+        );
+    }
+
+    <span class="pl-k">@Override</span>
+    <span class="pl-k">protected</span> <span class="pl-k">void</span> <span class="pl-en">clickedOnAction</span>(<span class="pl-k">int</span> <span class="pl-v">position</span>) {
+
+    }
+}</pre></div>
+
+<p>Actions are constructed with the buttons label. A boolean will enable/disable the dismiss button.
+(Clicking on the dismiss btn will trigger a scroll to top.)</p>
+
+<p><img src="https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content2.png" alt="alt sample">
+<img src="https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_content2_second.png" alt="alt sample"></p>
+
+<p>And add an adapter (based on ViewPager FragmentStatePagerAdapter)</p>
+
+<div class="highlight highlight-java"><pre>viewPager <span class="pl-k">=</span> (<span class="pl-smi">Pager</span>) findViewById(<span class="pl-smi">R</span><span class="pl-k">.</span>id<span class="pl-k">.</span>viewPager);
+viewPager<span class="pl-k">.</span>setAdapter(<span class="pl-k">new</span> <span class="pl-smi">FragmentStatePagerAdapter</span>(getSupportFragmentManager()) {
+            <span class="pl-k">@Override</span>
+            <span class="pl-k">public</span> <span class="pl-smi">Fragment</span> <span class="pl-en">getItem</span>(<span class="pl-k">final</span> <span class="pl-k">int</span> <span class="pl-v">position</span>) {
+                <span class="pl-k">if</span> (position <span class="pl-k">%</span> <span class="pl-c1">2</span> <span class="pl-k">==</span> <span class="pl-c1">0</span>) {
+                    <span class="pl-k">return</span> <span class="pl-k">new</span> <span class="pl-smi">PageWithImage</span>();
+                } <span class="pl-k">else</span> {
+                    <span class="pl-k">return</span> <span class="pl-k">new</span> <span class="pl-smi">CustomPage</span>();
+                }
+            }
+
+            <span class="pl-k">@Override</span>
+            <span class="pl-k">public</span> <span class="pl-k">int</span> <span class="pl-en">getCount</span>() {
+                <span class="pl-k">return</span> <span class="pl-c1">5</span>;
+            }
+        });</pre></div>
+
+<h2>
+<a id="contextual-menu" class="anchor" href="#contextual-menu" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contextual menu</h2>
+
+<p>You can display a ContextualMenu, accessible by a long press on any page content.</p>
+
+<p><img src="https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_menu.png" alt="alt sample_menu"></p>
+
+<p>In your activity layout, add ContextualMenu</p>
+
+<div class="highlight highlight-xml"><pre>&lt;<span class="pl-ent">FrameLayout</span> <span class="pl-e">xmlns</span><span class="pl-e">:</span><span class="pl-e">android</span>=<span class="pl-s"><span class="pl-pds">"</span>http://schemas.android.com/apk/res/android<span class="pl-pds">"</span></span>
+    <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+    <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+    <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">background</span>=<span class="pl-s"><span class="pl-pds">"</span>@color/black<span class="pl-pds">"</span></span>&gt;
+
+    &lt;<span class="pl-ent">com</span>.github.florent37.wearkit.view.Pager
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>@+id/viewPager<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>/&gt;
+
+    &lt;<span class="pl-ent">com</span>.github.florent37.wearkit.view.StatusBarView
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>wrap_content<span class="pl-pds">"</span></span>/&gt;
+
+    &lt;<span class="pl-ent">com</span>.github.florent37.wearkit.view.ContextualMenu
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>@+id/menu<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>/&gt;
+
+&lt;/<span class="pl-ent">FrameLayout</span>&gt;</pre></div>
+
+<p>Fill in your code with it (4 entries max)</p>
+
+<pre lang="java`"><code>ContextualMenu contextualMenu = ((ContextualMenu) findViewById(R.id.menu));
+contextualMenu.setMenuEntries(new String[]{
+                "Accept",
+                "Decline"
+        }, new Drawable[]{
+                getResources().getDrawable(R.drawable.wearkit_menu_accept),
+                getResources().getDrawable(R.drawable.wearkit_menu_decline)
+        });
+</code></pre>
+
+<p>And listen to the user interraction</p>
+
+<pre lang="java`"><code>contextualMenu.setOnMenuClickListener(new ContextualMenu.OnMenuClickListener() {
+            @Override
+            public void onMenuClick(int position) {
+
+            }
+        });
+</code></pre>
+
+<h2>
+<a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dependencies</h2>
+
+<p>Using menu logos from <a href="http://www.sketchappsources.com/free-source/960-apple-watch-menu-ui-kit-sketch-freebie-resource.html">http://www.sketchappsources.com/free-source/960-apple-watch-menu-ui-kit-sketch-freebie-resource.html</a></p>
+
+<h2>
+<a id="todo" class="anchor" href="#todo" aria-hidden="true"><span class="octicon octicon-link"></span></a>TODO</h2>
+
+<ul>
+<li>Implement custom scrollbar, with 1/3 screen height</li>
+</ul>
+
+<h2>
+<a id="community" class="anchor" href="#community" aria-hidden="true"><span class="octicon octicon-link"></span></a>Community</h2>
+
+<p>Looking for contributors, feel free to fork !</p>
+
+<h2>
+<a id="wear" class="anchor" href="#wear" aria-hidden="true"><span class="octicon octicon-link"></span></a>Wear</h2>
+
+<p>If you want to learn wear development : <a href="http://tutos-android-france.com/developper-une-application-pour-les-montres-android-wear/">http://tutos-android-france.com/developper-une-application-pour-les-montres-android-wear/</a>.</p>
+
+<h2>
+<a id="credits" class="anchor" href="#credits" aria-hidden="true"><span class="octicon octicon-link"></span></a>Credits</h2>
+
+<p>Author: Florent Champigny</p>
+
+<p><a href="https://plus.google.com/+florentchampigny">
+  <img alt="Follow me on Google+" src="https://raw.githubusercontent.com/florent37/DaVinci/master/mobile/src/main/res/drawable-hdpi/gplus.png">
+</a>
+<a href="https://twitter.com/florent_champ">
+  <img alt="Follow me on Twitter" src="https://raw.githubusercontent.com/florent37/DaVinci/master/mobile/src/main/res/drawable-hdpi/twitter.png">
+</a>
+<a href="https://www.linkedin.com/profile/view?id=297860624">
+  <img alt="Follow me on LinkedIn" src="https://raw.githubusercontent.com/florent37/DaVinci/master/mobile/src/main/res/drawable-hdpi/linkedin.png">
+</a></p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<pre><code>Copyright 2015 florent37, Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+</code></pre>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
