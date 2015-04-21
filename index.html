@@ -75,12 +75,33 @@
 
 &lt;/<span class="pl-ent">FrameLayout</span>&gt;</pre></div>
 
+<p>The Status Bar Title respond to Activity's title, but you can change it with .setTitle</p>
+
+<div class="highlight highlight-java"><pre><span class="pl-smi">StatusBarView</span> statusBarView <span class="pl-k">=</span> (<span class="pl-smi">StatusBarView</span>) findViewById(<span class="pl-smi">R</span><span class="pl-k">.</span>id<span class="pl-k">.</span>statusBar);
+statusBarView<span class="pl-k">.</span>setTitle(<span class="pl-s"><span class="pl-pds">"</span>MyTitle<span class="pl-pds">"</span></span>);</pre></div>
+
 <p>You can set the title color</p>
 
 <div class="highlight highlight-xml"><pre>&lt;<span class="pl-ent">com</span>.github.florent37.wearkit.view.StatusBarView
     <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
     <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>wrap_content<span class="pl-pds">"</span></span>
     <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">titleColor</span>=<span class="pl-s"><span class="pl-pds">"</span>@color/blue<span class="pl-pds">"</span></span>/&gt;</pre></div>
+
+<div class="highlight highlight-java"><pre>statusBarView<span class="pl-k">.</span>setTitleColor(<span class="pl-smi">Color</span><span class="pl-c1"><span class="pl-k">.</span>BLUE</span>  );</pre></div>
+
+<p>You can also add a Back button to the status bar</p>
+
+<div class="highlight highlight-xml"><pre>&lt;<span class="pl-ent">com</span>.github.florent37.wearkit.view.StatusBarView
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>wrap_content<span class="pl-pds">"</span></span>
+        <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">backEnabled</span>=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>
+        /&gt;</pre></div>
+
+<div class="highlight highlight-java"><pre>statusBarView<span class="pl-k">.</span>setBackEnabled(<span class="pl-c1">true</span>);</pre></div>
+
+<p><img src="https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_back.png" alt="alt sample"></p>
+
+<p>Clicking on the status bar will finish the current Activity</p>
 
 <h2>
 <a id="modal-sheets---page" class="anchor" href="#modal-sheets---page" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modal Sheets - Page</h2>
@@ -227,6 +248,31 @@ contextualMenu.setMenuEntries(new String[]{
             }
         });
 </code></pre>
+
+<h2>
+<a id="styling" class="anchor" href="#styling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Styling</h2>
+
+<p>Wearkit come with his styled widgets</p>
+
+<p><strong>Group</strong></p>
+
+<div class="highlight highlight-xml"><pre>&lt;<span class="pl-ent">LinearLayout</span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>wrap_content<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>140dp<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">orientation</span>=<span class="pl-s"><span class="pl-pds">"</span>vertical<span class="pl-pds">"</span></span>
+        <span class="pl-e">style</span>=<span class="pl-s"><span class="pl-pds">"</span>@style/wearkit.Group<span class="pl-pds">"</span></span>&gt;</pre></div>
+
+<p><img src="https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_group.png" alt="alt sample"></p>
+
+<p><strong>Button</strong></p>
+
+<div class="highlight highlight-xml"><pre>&lt;<span class="pl-ent">Button</span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>wrap_content<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>wrap_content<span class="pl-pds">"</span></span>
+        <span class="pl-e">style</span>=<span class="pl-s"><span class="pl-pds">"</span>@style/wearkit.Button<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">text</span>=<span class="pl-s"><span class="pl-pds">"</span>Button<span class="pl-pds">"</span></span> /&gt;</pre></div>
+
+<p><img src="https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_button.png" alt="alt sample"></p>
 
 <h2>
 <a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dependencies</h2>
