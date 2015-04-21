@@ -21,6 +21,7 @@ public class StatusBarView extends FrameLayout implements View.OnClickListener {
     int mTitleColor = -1;
     boolean mBackEnabled = false;
 
+    View mBackView;
     TextView mTitle;
     TextView mTimeView;
 
@@ -57,6 +58,7 @@ public class StatusBarView extends FrameLayout implements View.OnClickListener {
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
+        mBackView = findViewById(R.id.wearkit_statusbar_back);
         mTitle = (TextView) findViewById(R.id.wearkit_statusbar_title);
         mTimeView = (TextView) findViewById(R.id.wearkit_statusbar_timeView);
 
@@ -65,14 +67,40 @@ public class StatusBarView extends FrameLayout implements View.OnClickListener {
         if(!isInEditMode())
             title = ((Activity) getContext()).getTitle().toString();
 
-        if (mBackEnabled) {
-            title = "< "+title;
-            setOnClickListener(this);
-        }
-        mTitle.setText(title);
+        //update
+        this.setBackEnabled(mBackEnabled);
+        this.setTitle(title);
+        this.setTitleColor(mTitleColor);
+    }
 
+    public int getTitleColor() {
+        return mTitleColor;
+    }
+
+    public void setTitleColor(int titleColor) {
+        this.mTitleColor = titleColor;
         if (mTitleColor != -1)
             mTitle.setTextColor(mTitleColor);
+    }
+
+    public boolean isBackEnabled() {
+        return mBackEnabled;
+    }
+
+    public void setBackEnabled(boolean backEnabled) {
+        this.mBackEnabled = backEnabled;
+
+        if (mBackEnabled) {
+            mBackView.setVisibility(VISIBLE);
+            setOnClickListener(this);
+        }else{
+            mBackView.setVisibility(GONE);
+            setOnClickListener(null);
+        }
+    }
+
+    public void setTitle(String title) {
+        mTitle.setText(title);
     }
 
     @Override

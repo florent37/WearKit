@@ -48,6 +48,13 @@ In your activity layout, add StatusBarView
 </FrameLayout>
 ```
 
+The Status Bar Title respond to Activity's title, but you can change it with .setTitle
+
+```java
+StatusBarView statusBarView = (StatusBarView) findViewById(R.id.statusBar);
+statusBarView.setTitle("MyTitle");
+```
+
 You can set the title color
 ```xml
 <com.github.florent37.wearkit.view.StatusBarView
@@ -55,6 +62,20 @@ You can set the title color
     android:layout_height="wrap_content"
     app:titleColor="@color/blue"/>
 ```
+
+You can also add a Back button to the status bar
+
+```xml
+<com.github.florent37.wearkit.view.StatusBarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backEnabled="true"
+        />
+```
+
+![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_back.png)
+
+The click on status bar will finish the current Activity
 
 Modal Sheets - Page
 --------
@@ -212,6 +233,33 @@ contextualMenu.setOnMenuClickListener(new ContextualMenu.OnMenuClickListener() {
             }
         });
 ```
+
+Styling
+--------
+
+Wearkit come with his styled widgets
+
+**Group**
+
+```xml
+<LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="140dp"
+        android:orientation="vertical"
+        style="@style/wearkit.Group">
+```
+![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_group.png)
+
+**Button**
+
+```xml
+<Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/wearkit.Button"
+        android:text="Button" />
+```
+![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_button.png)
 
 
 Dependencies

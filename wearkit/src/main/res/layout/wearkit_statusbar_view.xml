@@ -1,23 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="#C000"
     android:layout_height="22dp"
     android:paddingLeft="3dp"
     android:paddingRight="3dp">
 
-    <TextView
-        android:id="@+id/wearkit_statusbar_title"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:gravity="center_vertical"
+        android:orientation="horizontal"
         android:layout_alignParentLeft="true"
-        android:layout_toLeftOf="@+id/timeView"
-        android:lines="1"
-        android:text="@string/app_name"
-        android:textColor="@color/white"
-        android:alpha="0.9" />
+        android:layout_toLeftOf="@+id/wearkit_statusbar_timeView"
+        >
+
+        <TextView
+            android:id="@+id/wearkit_statusbar_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/back"
+            android:visibility="gone"
+            android:layout_marginRight="2sp"
+            android:layout_marginLeft="2sp"
+            tools:visibility="visible"
+            android:textColor="@color/white"
+            android:alpha="0.9" />
+
+        <TextView
+            android:id="@+id/wearkit_statusbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:alpha="0.9" />
+    </LinearLayout>
 
     <com.github.florent37.wearkit.view.TimeView
         android:id="@+id/wearkit_statusbar_timeView"

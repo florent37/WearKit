@@ -1,2 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Button style="@style/wearkit.Button.dismiss"/>
+<Button
+    style="@style/wearkit.Button.dismiss"
+    android:layout_gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.github.florent37.wearkit.view.ContextualMenu;
 import com.github.florent37.wearkit.view.Pager;
+import com.github.florent37.wearkit.view.StatusBarView;
 
 
 public class MainActivity extends FragmentActivity {
@@ -18,6 +19,9 @@ public class MainActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        StatusBarView statusBarView = (StatusBarView) findViewById(R.id.statusBar);
+        statusBarView.setTitle("MyTitle");
 
         viewPager = (Pager) findViewById(R.id.viewPager);
         viewPager.setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) {
