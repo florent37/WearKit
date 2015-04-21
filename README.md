@@ -64,7 +64,7 @@ You can set the title color
 ```
 
 ```java
-statusBarView.setTitleColor(Color.BLUE);
+statusBarView.setTitleColor(Color.BLUE  );
 ```
 
 You can also add a Back button to the status bar
@@ -83,7 +83,7 @@ statusBarView.setBackEnabled(true);
 
 ![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_back.png)
 
-The click on status bar will finish the current Activity
+Clicking on the status bar will finish the current Activity
 
 Modal Sheets - Page
 --------
