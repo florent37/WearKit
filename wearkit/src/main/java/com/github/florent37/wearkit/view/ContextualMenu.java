@@ -11,9 +11,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.os.Handler;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -35,7 +33,7 @@ import java.util.List;
  */
 public class ContextualMenu extends RelativeLayout {
 
-    public interface OnMenuClickListener{
+    public interface OnMenuClickListener {
         public void onMenuClick(int position);
     }
 
@@ -59,19 +57,6 @@ public class ContextualMenu extends RelativeLayout {
         super(context, attrs);
 
         addView(LayoutInflater.from(context).inflate(R.layout.wearkit_menu, this, false));
-
-        if (isInEditMode()) {
-            setMenuEntries(new String[]{
-                    "Accept",
-                    "Accept",
-                    "Accept"
-            }, new Drawable[]{
-                    getContext().getDrawable(R.drawable.wearkit_menu_accept),
-                    getContext().getDrawable(R.drawable.wearkit_menu_accept),
-                    getContext().getDrawable(R.drawable.wearkit_menu_accept)
-            });
-        }
-
     }
 
     public ContextualMenu(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -101,7 +86,6 @@ public class ContextualMenu extends RelativeLayout {
         button4 = findViewById(R.id.wearkit_menu_row_2_cell_2);
 
         table.setVisibility(GONE);
-
         //avoid scroll behind this view
         table.setOnTouchListener(new OnTouchListener() {
             @Override
@@ -109,6 +93,20 @@ public class ContextualMenu extends RelativeLayout {
                 return true;
             }
         });
+
+        if (isInEditMode()) {
+            setMenuEntries(new String[]{
+                    "Accept",
+                    "Accept",
+                    "Accept",
+                    "Accept"
+            }, new Drawable[]{
+                    getContext().getDrawable(R.drawable.wearkit_menu_accept),
+                    getContext().getDrawable(R.drawable.wearkit_menu_accept),
+                    getContext().getDrawable(R.drawable.wearkit_menu_accept),
+                    getContext().getDrawable(R.drawable.wearkit_menu_accept)
+            });
+        }
     }
 
     public void setMenuEntries(List<String> names, List<Drawable> drawables) {
@@ -136,7 +134,7 @@ public class ContextualMenu extends RelativeLayout {
                         @Override
                         public void onClick(View v) {
                             toggle();
-                            if(onMenuClickListener != null)
+                            if (onMenuClickListener != null)
                                 onMenuClickListener.onMenuClick(0);
                         }
                     });
@@ -150,7 +148,7 @@ public class ContextualMenu extends RelativeLayout {
                         @Override
                         public void onClick(View v) {
                             toggle();
-                            if(onMenuClickListener != null)
+                            if (onMenuClickListener != null)
                                 onMenuClickListener.onMenuClick(1);
                         }
                     });
@@ -164,7 +162,7 @@ public class ContextualMenu extends RelativeLayout {
                         @Override
                         public void onClick(View v) {
                             toggle();
-                            if(onMenuClickListener != null)
+                            if (onMenuClickListener != null)
                                 onMenuClickListener.onMenuClick(2);
                         }
                     });
@@ -178,7 +176,7 @@ public class ContextualMenu extends RelativeLayout {
                         @Override
                         public void onClick(View v) {
                             toggle();
-                            if(onMenuClickListener != null)
+                            if (onMenuClickListener != null)
                                 onMenuClickListener.onMenuClick(3);
                         }
                     });
@@ -220,33 +218,32 @@ public class ContextualMenu extends RelativeLayout {
         return returnedBitmap;
     }
 
-    public static ContextualMenu findFrom(Context context){
-        if(context != null){
-            return findFrom(((Activity)context).getWindow().getDecorView());
-        }
-        else
+    public static ContextualMenu findFrom(Context context) {
+        if (context != null) {
+            return findFrom(((Activity) context).getWindow().getDecorView());
+        } else
             return null;
     }
 
-    public static ContextualMenu findFrom(View v){
-        if(v instanceof ContextualMenu)
-            return (ContextualMenu)v;
-        else if(v instanceof ViewGroup){
-            ViewGroup viewGroup = ((ViewGroup)v);
+    public static ContextualMenu findFrom(View v) {
+        if (v instanceof ContextualMenu)
+            return (ContextualMenu) v;
+        else if (v instanceof ViewGroup) {
+            ViewGroup viewGroup = ((ViewGroup) v);
             int childCount = viewGroup.getChildCount();
-            for(int i=0;i<childCount;++i){
+            for (int i = 0; i < childCount; ++i) {
                 View childView = findFrom(viewGroup.getChildAt(i));
-                if(childView != null)
+                if (childView != null)
                     return (ContextualMenu) childView;
             }
         }
         return null;
     }
 
-    public static void toggleFromContext(Context context){
-        if(context != null){
+    public static void toggleFromContext(Context context) {
+        if (context != null) {
             ContextualMenu contextualMenu = findFrom(context);
-            if(contextualMenu != null){
+            if (contextualMenu != null) {
                 contextualMenu.toggle();
             }
         }

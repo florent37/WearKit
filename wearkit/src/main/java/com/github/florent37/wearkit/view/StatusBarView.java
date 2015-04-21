@@ -1,13 +1,13 @@
 package com.github.florent37.wearkit.view;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.Paint;
-import android.graphics.Typeface;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
@@ -16,7 +16,7 @@ import com.github.florent37.R;
 /**
  * Created by florentchampigny on 16/04/15.
  */
-public class StatusBarView extends FrameLayout {
+public class StatusBarView extends FrameLayout implements View.OnClickListener {
 
     int mTitleColor = -1;
     boolean mBackEnabled = false;
@@ -24,12 +24,12 @@ public class StatusBarView extends FrameLayout {
     TextView mTitle;
     TextView mTimeView;
 
-    private void handleAttributes(Context context, AttributeSet attrs){
+    private void handleAttributes(Context context, AttributeSet attrs) {
         TypedArray styledAttrs = context.obtainStyledAttributes(attrs, R.styleable.StatusBarView);
         try {
             mTitleColor = styledAttrs.getColor(R.styleable.StatusBarView_titleColor, -1);
-            mBackEnabled = styledAttrs.getBoolean(R.styleable.StatusBarView_backEnabled,false);
-        }finally {
+            mBackEnabled = styledAttrs.getBoolean(R.styleable.StatusBarView_backEnabled, false);
+        } finally {
             styledAttrs.recycle();
         }
 
@@ -42,7 +42,7 @@ public class StatusBarView extends FrameLayout {
 
     public StatusBarView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        handleAttributes(context,attrs);
+        handleAttributes(context, attrs);
     }
 
     public StatusBarView(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -60,8 +60,24 @@ public class StatusBarView extends FrameLayout {
         mTitle = (TextView) findViewById(R.id.wearkit_statusbar_title);
         mTimeView = (TextView) findViewById(R.id.wearkit_statusbar_timeView);
 
+        String title = mTitle.getText().toString();
 
-        if(mTitleColor != -1)
+        if(!isInEditMode())
+            title = ((Activity) getContext()).getTitle().toString();
+
+        if (mBackEnabled) {
+            title = "< "+title;
+            setOnClickListener(this);
+        }
+        mTitle.setText(title);
+
+        if (mTitleColor != -1)
             mTitle.setTextColor(mTitleColor);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(mBackEnabled)
+            ((Activity) getContext()).finish();
     }
 }
