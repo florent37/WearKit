@@ -331,4 +331,4 @@ License
 [snap]: https://oss.sonatype.org/content/repositories/snapshots/
 [tuto_wear]: http://tutos-android-france.com/developper-une-application-pour-les-montres-android-wear/
 [logos_menu]: http://www.sketchappsources.com/free-source/960-apple-watch-menu-ui-kit-sketch-freebie-resource.html
-[viewpager_indicator]
+[viewpager_indicator]: https://github.com/JakeWharton/Android-ViewPagerIndicator][viewpager_indicator
