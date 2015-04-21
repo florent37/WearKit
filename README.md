@@ -63,6 +63,10 @@ You can set the title color
     app:titleColor="@color/blue"/>
 ```
 
+```java
+statusBarView.setTitleColor(Color.BLUE);
+```
+
 You can also add a Back button to the status bar
 
 ```xml
@@ -71,6 +75,10 @@ You can also add a Back button to the status bar
         android:layout_height="wrap_content"
         app:backEnabled="true"
         />
+```
+
+```java
+statusBarView.setBackEnabled(true);
 ```
 
 ![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/sample_back.png)
