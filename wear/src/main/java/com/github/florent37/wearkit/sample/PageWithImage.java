@@ -1,4 +1,4 @@
-package com.tutosandroidfrance.wearsample;
+package com.github.florent37.wearkit.sample;
 
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.github.florent37.wearkit.Actions;
-import com.github.florent37.wearkit.view.Page;
 import com.github.florent37.wearkit.view.PageWithActions;
 
 /**
