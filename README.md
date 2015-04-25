@@ -3,7 +3,7 @@ WearKit
 
 [![Build Status](https://travis-ci.org/florent37/WearKit.svg?branch=master)](https://travis-ci.org/florent37/WearKit)
 
-![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/<wearkit2_small class="jpg"></wearkit2_small>)
+![alt sample](https://raw.githubusercontent.com/florent37/WearKit/master/wear/src/main/res/drawable/wearkit2_small.jpg)
 
 Wearkit is an Android Wear implementation of WatchKit.
 
